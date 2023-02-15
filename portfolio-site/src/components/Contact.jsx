@@ -25,19 +25,19 @@ const Contact = () => {
                         </div>
                         <p className='pt-8 uppercase'>Connect with me</p>
                         <div className='flex items-center justify-between py-4'>
-                            <div className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer
+                            <div className='rounded-full shadow-lg shadow-gray-400 hover:bg-[#b2b0e4] p-6 cursor-pointer
                                 hover:scale-110 ease-in duration-300'>
                             <FaLinkedinIn />
                             </div>
-                            <div className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer
+                            <div className='rounded-full shadow-lg shadow-gray-400 hover:bg-[#b2b0e4] p-6 cursor-pointer
                                 hover:scale-110 ease-in duration-300'>
                                 <FaGithub />
                             </div>
-                            <div className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer
+                            <div className='rounded-full shadow-lg shadow-gray-400 hover:bg-[#b2b0e4] p-6 cursor-pointer
                                 hover:scale-110 ease-in duration-300'>
                                 <AiOutlineMail />
                             </div>
-                            <div className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer
+                            <div className='rounded-full shadow-lg shadow-gray-400 hover:bg-[#b2b0e4] p-6 cursor-pointer
                                 hover:scale-110 ease-in duration-300'>
                                 <BsFillPersonLinesFill />
                             </div>
