@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Logo from '../assets/logo.png'
 import { AiOutlineMenu, AiOutlineClose, AiOutlineMail } from "react-icons/ai";
 import { FaLinkedinIn, FaGithub } from 'react-icons/fa'
@@ -8,17 +8,46 @@ const Navbar = () => {
     const [toggleNavbar, setToggleNavbar] = useState(false)
     const handleTogleNavbar = () => setToggleNavbar(prev => !prev)
 
+    const [shadow, setShadow] = useState(false)
+
+    useEffect(() => {
+
+      const handleShadow = () => {
+        if (window.scrollY >= 90) {
+            setShadow(true)
+        } else {
+            setShadow(false)
+        }
+
+    }
+    window.addEventListener('scroll', handleShadow)
+
+    }, [])
+    
+
   return (
-    <div className='fixed w-full h-20 shadow-xl z-[100]'>
+    <div className={shadow ? 'fixed w-full h-20 shadow-xl z-[100]' : 'fixed w-full h-20 z-[100]'}>
         <div className='flex justify-between items-center w-full h-full px-2 xl:px-16'>
-            <img width="100" height="100" src={Logo} alt="logo-image" />
+            <a href="/">
+                <img width="100" height="100" src={Logo} alt="logo-image" />
+            </a>
             <div>
                 <ul className='hidden md:flex'>
-                    <li className='ml-10 text-sm uppercase hover:border-b'>Home</li>
-                    <li className='ml-10 text-sm uppercase hover:border-b'>About</li>
-                    <li className='ml-10 text-sm uppercase hover:border-b'>Skills</li>
-                    <li className='ml-10 text-sm uppercase hover:border-b'>Projects</li>
-                    <li className='ml-10 text-sm uppercase hover:border-b'>Contact</li>
+                    <a href="/#">
+                        <li className='ml-10 text-sm uppercase hover:border-b'>Home</li>
+                    </a>
+                    <a href="/#about">
+                        <li className='ml-10 text-sm uppercase hover:border-b'>About</li>
+                    </a>
+                    <a href="/#skills">
+                        <li className='ml-10 text-sm uppercase hover:border-b'>Skills</li>
+                    </a>
+                    <a href="/#projects">
+                        <li className='ml-10 text-sm uppercase hover:border-b'>Projects</li>
+                    </a>
+                    <a href="/#contact">
+                        <li className='ml-10 text-sm uppercase hover:border-b'>Contact</li>
+                    </a>
                 </ul>
             </div>
             <div onClick={handleTogleNavbar}>
