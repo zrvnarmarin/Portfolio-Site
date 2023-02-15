@@ -77,20 +77,20 @@ const Navbar = () => {
                 </div>
                 <div className='py-4 flex flex-col'>
                     <ul className='uppercase'>
-                        <li className='py-4 text-sm'>
-                            <a>Home</a>
+                        <li onClick={() => setToggleNavbar(true)} className='py-4 text-sm'>
+                            <a href='/#'>Home</a>
                         </li>
-                        <li className='py-4 text-sm'>
-                            <a>About</a>
+                        <li onClick={() => setToggleNavbar(true)} className='py-4 text-sm'>
+                            <a href='/#about'>About</a>
                         </li>
-                        <li className='py-4 text-sm'>
-                            <a>Skills</a>
+                        <li onClick={() => setToggleNavbar(true)} className='py-4 text-sm'>
+                            <a href='/#skills'>Skills</a>
                         </li>
-                        <li className='py-4 text-sm'>
-                            <a>Projects</a>
+                        <li onClick={() => setToggleNavbar(true)} className='py-4 text-sm'>
+                            <a href='/#projects'>Projects</a>
                         </li>
-                        <li className='py-4 text-sm'>
-                            <a>Contact</a>
+                        <li onClick={() => setToggleNavbar(true)} className='py-4 text-sm'>
+                            <a href='/#contact'>Contact</a>
                         </li>
                     </ul>
                     <div className='pt-40'>
